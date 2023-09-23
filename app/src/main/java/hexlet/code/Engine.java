@@ -54,9 +54,7 @@ public class Engine {
                     take++;
                 }
 
-                if (take == 3) {
-                    System.out.println("Congratulations, " + name + "!");
-                }
+                System.out.println("Congratulations, " + name + "!");
             }
             case "4" -> {
                 int take = 1;
@@ -81,9 +79,7 @@ public class Engine {
                     take++;
                 }
 
-                if (take == 3) {
-                    System.out.println("Congratulations, " + name + "!");
-                }
+                System.out.println("Congratulations, " + name + "!");
             }
             case "5" -> {
                 int take = 1;
@@ -108,9 +104,7 @@ public class Engine {
                     take++;
                 }
 
-                if (take == 3) {
-                    System.out.println("Congratulations, " + name + "!");
-                }
+                System.out.println("Congratulations, " + name + "!");
             }
             case "6" -> {
                 int take = 1;
@@ -136,9 +130,7 @@ public class Engine {
                     take++;
                 }
 
-                if (take == 3) {
-                    System.out.println("Congratulations, " + name + "!");
-                }
+                System.out.println("Congratulations, " + name + "!");
             }
             default -> {
                 scanner.close();
