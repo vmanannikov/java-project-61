@@ -34,6 +34,7 @@ public class Engine {
                 int take = 1;
                 while (take < 4) {
                     Calc.start();
+                    System.out.println("What is the result of the expression?");
                     var question = Calc.getExpression();
                     printQuestion(question);
                     System.out.print("Your answer: ");
@@ -161,9 +162,6 @@ public class Engine {
 
     public static void welcome() {
         System.out.println("Welcome to the Brain Games!");
-    }
-
-    public static void greetingUser(String name) {
     }
 
     public static void printChoice(String choice) {
