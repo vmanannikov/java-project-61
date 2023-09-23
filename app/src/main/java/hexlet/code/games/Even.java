@@ -29,7 +29,7 @@ public class Even {
 
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + name + "'");
+                System.out.println("Let's try again, " + name + "!");
                 break;
             }
         }
