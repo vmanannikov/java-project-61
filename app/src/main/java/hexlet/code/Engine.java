@@ -9,10 +9,10 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class Engine {
+    private static final int TAKES = 4;
     public static void startEngine() {
 
         Scanner scanner = new Scanner(System.in);
-        static final int TAKES = 4;
 
         printMenu();
 
