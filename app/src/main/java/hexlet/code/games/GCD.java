@@ -6,10 +6,10 @@ public class GCD {
 
     private static int result;
     private static String expression;
+    static final int MIN_NUMBER = 1;
+    static final int MAX_NUMBER = 100;
 
     public static void start() {
-        final int MIN_NUMBER = 1;
-        final int MAX_NUMBER = 100;
 
         var firstNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
         var secondNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);

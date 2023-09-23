@@ -5,17 +5,14 @@ import hexlet.code.Engine;
 public class Progression {
     private static int guessNumber;
     private static String progression;
+
+    static final int MIN_NUMBER = 1;
+    static final int MAX_NUMBER = 100;
+    static final int MIN_STEP = 2;
+    static final int MAX_STEP = 9;
+    static final int HIDE_MIN = 2;
+    static final int HIDE_MAX = 8;
     public static void start() {
-
-        final int MIN_NUMBER = 1;
-        final int MAX_NUMBER = 100;
-
-        final int MIN_STEP = 2;
-        final int MAX_STEP = 9;
-
-        final int HIDE_MIN = 2;
-        final int HIDE_MAX = 8;
-
         int i = 1;
 
         StringBuilder sb = new StringBuilder();

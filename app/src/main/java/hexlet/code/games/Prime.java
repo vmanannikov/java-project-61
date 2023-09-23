@@ -4,12 +4,10 @@ import hexlet.code.Engine;
 
 public class Prime {
     private static int numberPrime;
-
     private static String isPrime;
+    static final int MIN_NUMBER = 3;
+    static final int MAX_NUMBER = 100;
     public static void start() {
-        final int MIN_NUMBER = 3;
-        final int MAX_NUMBER = 100;
-
         numberPrime = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
         isPrime = Boolean.toString(isPrime(numberPrime));
     }
