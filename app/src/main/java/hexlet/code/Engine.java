@@ -113,7 +113,7 @@ public class Engine {
                 while (take < 4) {
                     Prime.start();
                     var question = Prime.getNumber();
-                    System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'");
+                    System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                     printQuestion(Integer.toString(question));
                     System.out.print("Your answer: ");
                     var answer = scanner.next();
