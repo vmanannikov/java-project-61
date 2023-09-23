@@ -12,6 +12,7 @@ public class Progression {
     static final int MAX_STEP = 9;
     static final int HIDE_MIN = 2;
     static final int HIDE_MAX = 8;
+    static final int TAKES = 10;
     public static void start() {
         int i = 1;
 
@@ -22,8 +23,6 @@ public class Progression {
         int stepNumber = Engine.getRandomNumber(MIN_STEP, MAX_STEP);
 
         int  hideNumber = Engine.getRandomNumber(HIDE_MIN, HIDE_MAX);
-
-        final int TAKES = 10;
 
         sb.append(startNumber);
 
