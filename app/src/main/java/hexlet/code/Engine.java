@@ -12,6 +12,7 @@ public class Engine {
     public static void startEngine() {
 
         Scanner scanner = new Scanner(System.in);
+        final int TAKES = 4;
 
         printMenu();
 
@@ -32,7 +33,7 @@ public class Engine {
             }
             case "3" -> {
                 int take = 1;
-                while (take < 4) {
+                while (take < TAKES) {
                     Calc.start();
                     System.out.println("What is the result of the expression?");
                     var question = Calc.getExpression();
@@ -58,7 +59,7 @@ public class Engine {
             }
             case "4" -> {
                 int take = 1;
-                while (take < 4) {
+                while (take < TAKES) {
                     GCD.start();
                     System.out.println("Find the greatest common divisor of given numbers.");
                     var question = GCD.getExpression();
@@ -84,7 +85,7 @@ public class Engine {
             }
             case "5" -> {
                 int take = 1;
-                while (take < 4) {
+                while (take < TAKES) {
                     Progression.start();
                     System.out.println("What number is missing in the progression?");
                     var question = Progression.getProgression();
@@ -110,7 +111,7 @@ public class Engine {
             }
             case "6" -> {
                 int take = 1;
-                while (take < 4) {
+                while (take < TAKES) {
                     Prime.start();
                     var question = Prime.getNumber();
                     System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");

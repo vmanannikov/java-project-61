@@ -4,12 +4,15 @@ import hexlet.code.Engine;
 
 public class GCD {
 
-    static int result;
-    static String expression;
+    private static int result;
+    private static String expression;
 
     public static void start() {
-        var firstNumber = Engine.getRandomNumber(1, 100);
-        var secondNumber = Engine.getRandomNumber(1, 100);
+        final int MIN_NUMBER = 1;
+        final int MAX_NUMBER = 100;
+
+        var firstNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+        var secondNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
         expression = firstNumber + " " + secondNumber;
         result = gcd(firstNumber, secondNumber);
     }

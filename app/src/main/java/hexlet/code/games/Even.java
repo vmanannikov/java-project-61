@@ -9,12 +9,13 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Scanner scanner = new Scanner(System.in);
 
-        int minNumber = 1;
-        int maxNumber = 100;
-        int countWrightTake = 0;
+        final int MIN_NUMBER = 1;
+        final int MAX_NUMBER = 100;
+        int countWrightTake = 1;
+        final int TAKES = 4;
 
-        while (countWrightTake < 3) {
-            var randomNumber = (int) (Math.random() * maxNumber + minNumber);
+        while (countWrightTake < TAKES) {
+            var randomNumber = (int) (Math.random() * MAX_NUMBER + MIN_NUMBER);
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             var answer = scanner.next();
@@ -33,8 +34,7 @@ public class Even {
                 break;
             }
         }
-        if (countWrightTake != 0) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+
+        System.out.println("Congratulations, " + name + "!");
     }
 }

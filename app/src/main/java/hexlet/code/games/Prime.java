@@ -3,10 +3,14 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    static int numberPrime;
-    static String isPrime;
+    private static int numberPrime;
+
+    private static String isPrime;
     public static void start() {
-        numberPrime = Engine.getRandomNumber(3, 100);
+        final int MIN_NUMBER = 3;
+        final int MAX_NUMBER = 100;
+
+        numberPrime = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
         isPrime = Boolean.toString(isPrime(numberPrime));
     }
 
