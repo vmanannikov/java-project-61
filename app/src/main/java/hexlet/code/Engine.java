@@ -60,6 +60,7 @@ public class Engine {
                 int take = 1;
                 while (take < 4) {
                     GCD.start();
+                    System.out.println("Find the greatest common divisor of given numbers.");
                     var question = GCD.getExpression();
                     printQuestion(question);
                     System.out.print("Your answer: ");
@@ -85,6 +86,7 @@ public class Engine {
                 int take = 1;
                 while (take < 4) {
                     Progression.start();
+                    System.out.println("What number is missing in the progression?");
                     var question = Progression.getProgression();
                     printQuestion(question);
                     System.out.print("Your answer: ");
