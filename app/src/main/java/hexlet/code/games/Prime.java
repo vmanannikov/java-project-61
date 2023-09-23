@@ -3,20 +3,20 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    static int number;
+    static int numberPrime;
     static String isPrime;
     public static void start() {
-        number = Engine.getRandomNumber(3, 100);
-        isPrime = Boolean.toString(isPrime(number));
+        numberPrime = Engine.getRandomNumber(3, 100);
+        isPrime = Boolean.toString(isPrime(numberPrime));
     }
 
     public static boolean isPrime(int number) {
-        if(number < 2) {
+        if (number < 2) {
             return false;
         }
 
-        for(int i = 2; i <= number / 2; i++) {
-            if(number % i == 0) {
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
                 return false;
             }
         }
@@ -24,7 +24,7 @@ public class Prime {
     }
 
     public static int getNumber() {
-        return number;
+        return numberPrime;
     }
 
     public static String isPrime() {

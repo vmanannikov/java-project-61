@@ -14,7 +14,7 @@ public class Even {
         int countWrightTake = 0;
 
         while (countWrightTake < 3) {
-            var randomNumber = (int)(Math.random() * maxNumber + minNumber);
+            var randomNumber = (int) (Math.random() * maxNumber + minNumber);
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             var answer = scanner.next();
@@ -29,7 +29,7 @@ public class Even {
 
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + name);
+                System.out.println("Let's try again, " + name + "'");
                 break;
             }
         }

@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -39,9 +43,10 @@ public class Engine {
                         System.out.println("Correct!");
                         System.out.println();
                     } else {
-                        System.out.println("'" + answer + "' " + "is wrong answer ;(. " +
-                                "Correct answer was " +
-                                "'" + Calc.getExpResult() + "'");
+                        System.out.println("'" + answer + "' "
+                                + "is wrong answer ;(. "
+                                + "Correct answer was "
+                                + "'" + Calc.getExpResult() + "'");
                         System.out.println("Let's try again, " + name + "!");
                         break;
                     }
@@ -65,9 +70,10 @@ public class Engine {
                         System.out.println("Correct!");
                         System.out.println();
                     } else {
-                        System.out.println("'" + answer + "' " + "is wrong answer ;(. " +
-                                "Correct answer was " +
-                                "'" + Calc.getExpResult() + "'");
+                        System.out.println("'" + answer + "' "
+                                + "is wrong answer ;(. "
+                                + "Correct answer was "
+                                + "'" + Calc.getExpResult() + "'");
                         System.out.println("Let's try again, " + name + "!");
                         break;
                     }
@@ -91,9 +97,10 @@ public class Engine {
                         System.out.println("Correct!");
                         System.out.println();
                     } else {
-                        System.out.println("'" + answer + "' " + "is wrong answer ;(. " +
-                                "Correct answer was " +
-                                "'" + Progression.getGuessNumber() + "'");
+                        System.out.println("'" + answer + "' "
+                                + "is wrong answer ;(. "
+                                + "Correct answer was "
+                                + "'" + Progression.getGuessNumber() + "'");
                         System.out.println("Let's try again, " + name + "!");
                         break;
                     }
@@ -118,9 +125,10 @@ public class Engine {
                         System.out.println("Correct!");
                         System.out.println();
                     } else {
-                        System.out.println("'" + answer + "' " + "is wrong answer ;(. " +
-                                "Correct answer was " +
-                                "'" + Prime.isPrime() + "'");
+                        System.out.println("'" + answer + "' "
+                                + "is wrong answer ;(. "
+                                + "Correct answer was "
+                                + "'" + Prime.isPrime() + "'");
                         System.out.println("Let's try again, " + name + "!");
                         break;
                     }
@@ -131,21 +139,24 @@ public class Engine {
                     System.out.println("Congratulations, " + name + "!");
                 }
             }
+            default -> {
+                scanner.close();
+            }
         }
     }
 
     public static int getRandomNumber(int minNumber, int maxNumber) {
-        return (int)(Math.random() * maxNumber + minNumber);
+        return (int) (Math.random() * maxNumber + minNumber);
     }
     public static void printMenu() {
-        System.out.println("Please enter the game number and press Enter.\n" +
-                "1 - Greet\n" +
-                "2 - Even\n" +
-                "3 - Calc\n" +
-                "4 - GCD\n" +
-                "5 - Progression\n" +
-                "6 - Prime\n" +
-                "0 - Exit\n");
+        System.out.println("Please enter the game number and press Enter.\n"
+                + "1 - Greet\n"
+                + "2 - Even\n"
+                + "3 - Calc\n"
+                + "4 - GCD\n"
+                + "5 - Progression\n"
+                + "6 - Prime\n"
+                + "0 - Exit\n");
     }
 
     public static void welcome() {

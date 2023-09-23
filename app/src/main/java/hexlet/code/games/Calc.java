@@ -10,14 +10,18 @@ public class Calc {
 
         var firstNumber = Engine.getRandomNumber(1, 100);
         var secondNumber = Engine.getRandomNumber(1, 100);
-        var operation = operations[Engine.getRandomNumber(0,2)];
+        var operation = operations[Engine.getRandomNumber(0, 2)];
 
         expression = firstNumber + " " + operation + " " + secondNumber;
 
-        switch (operation) {
-            case "+" -> expResult = firstNumber + secondNumber;
-            case "-" -> expResult = firstNumber - secondNumber;
-            case "*" -> expResult = firstNumber * secondNumber;
+        if (operation.equals("+")) {
+            expResult = firstNumber + secondNumber;
+        } else if (operation.equals("-")) {
+            expResult = firstNumber - secondNumber;
+        } else if (operation.equals("*")) {
+            expResult = firstNumber * secondNumber;
+        } else {
+            expResult = 0;
         }
     }
 

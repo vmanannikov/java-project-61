@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6adbbf4b-0d74-4cd1-9df2-2bb2d3e3abaf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet.code/App.java" beforeDir="false" />
-    </list>
+    <list default="true" id="6adbbf4b-0d74-4cd1-9df2-2bb2d3e3abaf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +60,7 @@
       <workItem from="1695222283665" duration="203000" />
       <workItem from="1695326849397" duration="105000" />
       <workItem from="1695452680451" duration="44000" />
+      <workItem from="1695452920275" duration="801000" />
     </task>
     <servers />
   </component>
