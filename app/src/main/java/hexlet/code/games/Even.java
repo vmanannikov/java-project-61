@@ -15,6 +15,7 @@ public class Even {
 
         while (countWrightTake < 3) {
             var randomNumber = (int) (Math.random() * maxNumber + minNumber);
+            System.out.println("What is the result of the expression?");
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
             var answer = scanner.next();
