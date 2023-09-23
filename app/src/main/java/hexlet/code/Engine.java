@@ -12,7 +12,7 @@ public class Engine {
     public static void startEngine() {
 
         Scanner scanner = new Scanner(System.in);
-        final int TAKES = 4;
+        static final int TAKES = 4;
 
         printMenu();
 

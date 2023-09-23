@@ -7,14 +7,14 @@ public class Progression {
     private static String progression;
     public static void start() {
 
-        final int MIN_NUMBER = 1;
-        final int MAX_NUMBER = 100;
+        static final int MIN_NUMBER = 1;
+        static final int MAX_NUMBER = 100;
 
-        final int MIN_STEP = 2;
-        final int MAX_STEP = 9;
+        static final int MIN_STEP = 2;
+        static final int MAX_STEP = 9;
 
-        final int HIDE_MIN = 2;
-        final int HIDE_MAX = 8;
+        static final int HIDE_MIN = 2;
+        static final int HIDE_MAX = 8;
 
         int i = 1;
 
@@ -26,11 +26,13 @@ public class Progression {
 
         int  hideNumber = Engine.getRandomNumber(HIDE_MIN, HIDE_MAX);
 
+        final int TAKES = 10;
+
         sb.append(startNumber);
 
         var nextNumber = startNumber;
 
-        while (i < 10) {
+        while (i < TAKES) {
             nextNumber += stepNumber;
             if (i == hideNumber) {
                 sb.append(" " + "..");
