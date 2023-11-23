@@ -11,13 +11,13 @@ public class Engine {
 
         Scanner scanner = new Scanner(System.in);
 
-        welcomeUser();
+        welcomeUser(scanner);
 
         printRule(description);
 
         for (int i = 0; i < 3; i++) {
             printQuestion(data[i][0]);
-            printAnswer();
+            printAnswer(scanner);
             if (!answer.equals(data[i][1])) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + data[i][1] + "'.");
                 System.out.println("Let's try again, " + userName + "!");
@@ -38,8 +38,7 @@ public class Engine {
         return (int) (Math.random() * maxNumber + minNumber);
     }
 
-    public static void welcomeUser() {
-        Scanner sc = new Scanner(System.in);
+    public static void welcomeUser(Scanner sc) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         userName = sc.next();
@@ -56,8 +55,7 @@ public class Engine {
         System.out.println();
     }
 
-    public static void printAnswer() {
-        Scanner sc = new Scanner(System.in);
+    public static void printAnswer(Scanner sc) {
         System.out.print("Your answer: ");
         answer = sc.next();
     }
