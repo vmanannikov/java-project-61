@@ -58,7 +58,7 @@ public class Engine {
 
     public static void printAnswer() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Answer: ");
+        System.out.print("Your answer: ");
         answer = sc.next();
     }
 
