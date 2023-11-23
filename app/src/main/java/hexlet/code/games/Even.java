@@ -1,41 +1,27 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class Even {
-
     static final int MIN_NUMBER = 1;
     static final int MAX_NUMBER = 100;
-    static final int TAKES = 4;
 
-    public static void start(String name) {
+    public static void start() {
+        final String description = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        Scanner scanner = new Scanner(System.in);
+        String[][] data = new String[3][2];
 
-        int countWrightTake = 1;
-
-        while (countWrightTake < TAKES) {
-            var randomNumber = (int) (Math.random() * MAX_NUMBER + MIN_NUMBER);
-            System.out.println("Question: " + randomNumber);
-            System.out.print("Your answer: ");
-            var answer = scanner.next();
-            System.out.println();
-
-            if (randomNumber % 2 == 0 && answer.equals("yes")
-                || randomNumber % 2 != 0 && answer.equals("no")) {
-
-                System.out.println("Correct!");
-                System.out.println();
-                countWrightTake++;
-
-            } else {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + name + "!");
-                break;
-            }
+        for (int i = 0; i < 3; i++) {
+            data[i] = getData();
         }
 
-        System.out.println("Congratulations, " + name + "!");
+        Engine.startEngine(description, data);
+    }
+
+    private static String[] getData() {
+        var number = (int) (Math.random() * MAX_NUMBER + MIN_NUMBER);
+        var question = Integer.toString(number);
+        var answer = number % 2 == 0 ? "yes" : "no";
+        return new String[] {question, answer};
     }
 }
