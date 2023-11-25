@@ -3,15 +3,15 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    static final int MIN_NUMBER = 1;
-    static final int MAX_NUMBER = 100;
-    static final int MIN_STEP = 2;
-    static final int MAX_STEP = 9;
-    static final int HIDE_MIN = 2;
-    static final int HIDE_MAX = 8;
-    static final int TAKES = 10;
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
+    private static final int MIN_STEP = 2;
+    private static final int MAX_STEP = 9;
+    private static final int HIDE_MIN = 2;
+    private static final int HIDE_MAX = 8;
+    private static final int TAKES = 10;
+    private static final String DESCRIPTION = "What number is missing in the progression?";
     public static void start() {
-        final String description = "What number is missing in the progression?";
 
         String[][] data = new String[3][2];
 
@@ -19,7 +19,7 @@ public class Progression {
             data[i] = getData();
         }
 
-        Engine.startEngine(description, data);
+        Engine.startEngine(DESCRIPTION, data);
     }
 
     private static String[] getData() {
@@ -40,7 +40,7 @@ public class Progression {
         while (i < TAKES) {
             nextNumber += stepNumber;
             if (i == hideNumber) {
-                sb.append(" " + "..");
+                sb.append(" ").append("..");
                 guessNumber = nextNumber;
             } else {
                 sb.append(" " + nextNumber);

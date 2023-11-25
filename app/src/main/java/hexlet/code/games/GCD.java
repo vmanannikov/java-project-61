@@ -3,11 +3,10 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
-    static final int MIN_NUMBER = 1;
-    static final int MAX_NUMBER = 100;
-
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
+    private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
     public static void start() {
-        final String description = "Find the greatest common divisor of given numbers.";
 
         String[][] data = new String[3][2];
 
@@ -15,7 +14,7 @@ public class GCD {
             data[i] = getData();
         }
 
-        Engine.startEngine(description, data);
+        Engine.startEngine(DESCRIPTION, data);
     }
 
     public static int gcd(int a, int b) {
