@@ -11,11 +11,13 @@ public class Progression {
     private static final int HIDE_MAX = 8;
     private static final int TAKES = 10;
     private static final String DESCRIPTION = "What number is missing in the progression?";
+    private static final int ROW_COUNT = 3;
+    private static final int COLUMN_COUNT = 2;
     public static void start() {
 
-        String[][] data = new String[3][2];
+        String[][] data = new String[ROW_COUNT][COLUMN_COUNT];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < ROW_COUNT; i++) {
             data[i] = getData();
         }
 

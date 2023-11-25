@@ -7,11 +7,13 @@ public class Calc {
     private static final int LAST_NUMBER = 100;
     private static final String DESCRIPTION = "What is the result of the expression?";
     private static final String[] OPERATIONS = {"*", "+", "-"};
+    private static final int ROW_COUNT = 3;
+    private static final int COLUMN_COUNT = 2;
     public static void start() {
 
-        String[][] data = new String[3][2];
+        String[][] data = new String[ROW_COUNT][COLUMN_COUNT];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < ROW_COUNT; i++) {
             data[i] = getData();
         }
 
