@@ -16,7 +16,7 @@ public class Prime {
             data[i] = getData();
         }
 
-        Engine.startEngine(DESCRIPTION, data);
+        Engine.start(DESCRIPTION, data);
     }
 
     public static boolean isPrime(int number) {

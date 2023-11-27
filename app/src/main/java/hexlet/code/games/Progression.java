@@ -21,7 +21,7 @@ public class Progression {
             data[i] = getData();
         }
 
-        Engine.startEngine(DESCRIPTION, data);
+        Engine.start(DESCRIPTION, data);
     }
 
     private static String[] getData() {
@@ -45,7 +45,7 @@ public class Progression {
                 sb.append(" ").append("..");
                 guessNumber = nextNumber;
             } else {
-                sb.append(" " + nextNumber);
+                sb.append(" ").append(nextNumber);
             }
             i++;
         }

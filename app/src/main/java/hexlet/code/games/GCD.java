@@ -16,7 +16,7 @@ public class GCD {
             data[i] = getData();
         }
 
-        Engine.startEngine(DESCRIPTION, data);
+        Engine.start(DESCRIPTION, data);
     }
 
     public static int gcd(int a, int b) {

@@ -17,7 +17,7 @@ public class Calc {
             data[i] = getData();
         }
 
-        Engine.startEngine(DESCRIPTION, data);
+        Engine.start(DESCRIPTION, data);
     }
 
     private static String[] getData() {
@@ -28,9 +28,12 @@ public class Calc {
 
         var expression = firstNumber + " " + operation + " " + secondNumber;
 
-        var expResult = operation.equals("+")
-                ? firstNumber + secondNumber : operation.equals("-")
-                ? firstNumber - secondNumber : firstNumber * secondNumber;
+        var expResult = switch (operation) {
+            case "+" -> firstNumber + secondNumber;
+            case "-" -> firstNumber - secondNumber;
+            case "*" -> firstNumber * secondNumber;
+            default -> throw new IllegalArgumentException("Undefined operator!");
+        };
 
         var question = expression;
         var answer = Integer.toString(expResult);

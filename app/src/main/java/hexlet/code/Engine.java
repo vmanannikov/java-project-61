@@ -3,11 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static String answer;
-    private static String userName;
-
     private static final int TAKES_COUNT = 3;
-    public static void startEngine(String description, String[][] data) {
+    private static final int QUESTION = 0;
+    private static final int ANSWER = 1;
+    public static void start(String description, String[][] data) {
+        String answer;
+        String userName;
 
         int correctCount = 0;
 
@@ -23,13 +24,13 @@ public class Engine {
 
         for (int i = 0; i < TAKES_COUNT; i++) {
 
-            System.out.print("Question: " + data[i][0]);
+            System.out.print("Question: " + data[i][QUESTION]);
             System.out.println();
 
             System.out.print("Your answer: ");
             answer = sc.next();
 
-            if (!answer.equals(data[i][1])) {
+            if (!answer.equals(data[i][ANSWER])) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + data[i][1] + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 break;
@@ -42,8 +43,8 @@ public class Engine {
         if (correctCount == TAKES_COUNT) {
             System.out.print("Congratulations, " + userName + "!");
             System.out.println();
-            sc.close();
         }
+        sc.close();
     }
 
     public static int getRandomNumber(int minNumber, int maxNumber) {

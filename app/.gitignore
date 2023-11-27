@@ -14,7 +14,7 @@
 *.log
 
 # User-specific stuff
-.idea
+.idea/
 
 # IntelliJ
 out/
