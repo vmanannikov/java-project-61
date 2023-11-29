@@ -7,20 +7,18 @@ public class Engine {
     private static final int QUESTION = 0;
     private static final int ANSWER = 1;
     public static void start(String description, String[][] data) {
-        String answer;
-        String userName;
-
-        int correctCount = 0;
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        userName = sc.next();
+        String userName = sc.next();
         System.out.println("Hello, " + userName + "!");
 
         System.out.print(description);
         System.out.println();
+
+        int correctCount = 0;
 
         for (int i = 0; i < TAKES_COUNT; i++) {
 
@@ -28,7 +26,7 @@ public class Engine {
             System.out.println();
 
             System.out.print("Your answer: ");
-            answer = sc.next();
+            String answer = sc.next();
 
             if (!answer.equals(data[i][ANSWER])) {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + data[i][1] + "'.");
@@ -45,9 +43,5 @@ public class Engine {
             System.out.println();
         }
         sc.close();
-    }
-
-    public static int getRandomNumber(int minNumber, int maxNumber) {
-        return (int) (Math.random() * maxNumber + minNumber);
     }
 }

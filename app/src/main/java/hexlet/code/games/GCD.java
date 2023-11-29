@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
     private static final int MIN_NUMBER = 1;
@@ -25,8 +26,8 @@ public class GCD {
 
     private static String[] getData() {
 
-        var firstNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
-        var secondNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+        var firstNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+        var secondNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
         var question = firstNumber + " " + secondNumber;
         var answer = Integer.toString(gcd(firstNumber, secondNumber));

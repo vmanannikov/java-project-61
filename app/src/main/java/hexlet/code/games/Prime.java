@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
     private static final int MIN_NUMBER = 3;
@@ -35,7 +36,7 @@ public class Prime {
 
     private static String[] getData() {
 
-        var numberPrime = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+        var numberPrime = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
         var question = Integer.toString(numberPrime);
         var answer = isPrime(numberPrime) ? "yes" : "no";

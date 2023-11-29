@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Progression {
     private static final int MIN_NUMBER = 1;
@@ -30,9 +31,9 @@ public class Progression {
 
         StringBuilder sb = new StringBuilder();
 
-        int startNumber = Engine.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
-        int stepNumber = Engine.getRandomNumber(MIN_STEP, MAX_STEP);
-        int  hideNumber = Engine.getRandomNumber(HIDE_MIN, HIDE_MAX);
+        int startNumber = Utils.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+        int stepNumber = Utils.getRandomNumber(MIN_STEP, MAX_STEP);
+        int  hideNumber = Utils.getRandomNumber(HIDE_MIN, HIDE_MAX);
 
         sb.append(startNumber);
 

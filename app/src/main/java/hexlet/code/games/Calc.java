@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     private static final int FIRST_NUMBER = 1;
@@ -22,8 +23,8 @@ public class Calc {
 
     private static String[] getData() {
 
-        var firstNumber = Engine.getRandomNumber(FIRST_NUMBER, LAST_NUMBER);
-        var secondNumber = Engine.getRandomNumber(FIRST_NUMBER, LAST_NUMBER);
+        var firstNumber = Utils.getRandomNumber(FIRST_NUMBER, LAST_NUMBER);
+        var secondNumber = Utils.getRandomNumber(FIRST_NUMBER, LAST_NUMBER);
         var operation = OPERATIONS[(int) (Math.random() * OPERATIONS.length)];
 
         var expression = firstNumber + " " + operation + " " + secondNumber;
@@ -32,7 +33,7 @@ public class Calc {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;
             case "*" -> firstNumber * secondNumber;
-            default -> throw new IllegalArgumentException("Undefined operator!");
+            default -> throw new RuntimeException("Undefined operator!");
         };
 
         var question = expression;
