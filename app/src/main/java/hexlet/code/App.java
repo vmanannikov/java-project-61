@@ -40,7 +40,7 @@ public class App {
             case GCD_NUM -> GCD.start();
             case PROGRESSION_NUM -> Progression.start();
             case PRIME_NUM -> Prime.start();
-            case EXIT_NUM -> System.exit(0);
+            case EXIT_NUM -> System.exit(EXIT_NUM);
             default -> System.out.println("Unknown game number!");
         }
         scanner.close();
